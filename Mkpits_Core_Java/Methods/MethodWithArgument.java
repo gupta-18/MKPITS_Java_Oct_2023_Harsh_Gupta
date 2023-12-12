@@ -22,7 +22,7 @@ public class MethodWithArgument {
 		System.out.println(gender);
 	}
 // similarly in methods parameters must have same names2
-	public void getNumber(long mobileNumber) {
+	public static void getNumber(long mobileNumber) {
 		System.out.println(mobileNumber);
 		
 	}
