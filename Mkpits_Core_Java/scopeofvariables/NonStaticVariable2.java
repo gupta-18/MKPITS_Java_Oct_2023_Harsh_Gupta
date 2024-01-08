@@ -29,7 +29,7 @@ public class NonStaticVariable2 {
 		System.out.println("your sallary is :-"+ variable.sallary);
 		System.out.println("universal value of pi is:-"+ variable.piValue);
 		
-		System.out.println("these are the default values"+ variable1.NonStaticVarible1 );
+		System.out.println("these are the default values");
 	
 	}
 

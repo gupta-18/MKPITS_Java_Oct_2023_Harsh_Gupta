@@ -1,3 +1,5 @@
+
+
 package com.mkpits.typecasting;
 
 public class ExplicitObjectToPrimitive {
@@ -19,6 +21,16 @@ public class ExplicitObjectToPrimitive {
 		int op= Integer.compare(x, y);
 		System.out.println(op);
 		
+		
+		Long num1 =67879054l;
+		int num2 = num1.intValue();
+		System.out.println(num2);
+		
+		
+	Integer i = Integer.valueOf(num);
+	int y1 = i.intValue();
+	System.out.println(y1);
+	System.out.println(i);
 	}
 
 }
