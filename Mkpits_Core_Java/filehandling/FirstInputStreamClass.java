@@ -6,7 +6,7 @@ import java.io.IOException;
 public class FirstInputStreamClass {
 //it is used to read files data exactly it appears in file
 	//in outstream we have created a file in this instream we are reading it 
-	
+	//we are using constructors here
 	public static void main(String[] args) throws IOException {
 		FileInputStream fis = new FileInputStream("E:\\mkpits_workspace\\CoreJava_Harsh_Gupta\\src\\com\\mkpits\\filehandling\\inputstream.txt"); 
 		int b =0;

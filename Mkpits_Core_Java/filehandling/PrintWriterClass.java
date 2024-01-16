@@ -16,7 +16,7 @@ public class PrintWriterClass {
 		
 		//here we are writing  file path in file writer so  it will write this  below print statement directly into the 
 		//what we write in print will be directly appended in file                                                 
-		
+		//we are using constructors here
 		PrintWriter pw1 = new PrintWriter(new FileWriter("E:\\\\mkpits_workspace\\\\CoreJava_Harsh_Gupta\\\\src\\\\com\\\\mkpits\\\\filehandling\\\\inputstream.txt",true), true);		
 		pw1.println("File Writer says hello");
 		pw1.close();

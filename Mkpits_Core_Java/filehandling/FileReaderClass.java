@@ -9,6 +9,7 @@ public class FileReaderClass {
 	public static void main(String[] args) throws IOException {
 		//irt also work as inputstream difference is it used for char type data
 	//here also if all data is read after that it takes as null
+		//we are using constructors here
 FileReader fr =new FileReader("E:\\\\mkpits_workspace\\\\CoreJava_Harsh_Gupta\\\\src\\\\com\\\\mkpits\\\\filehandling\\\\logic.txt");
 BufferedReader br = new BufferedReader(fr);
 String data = "";

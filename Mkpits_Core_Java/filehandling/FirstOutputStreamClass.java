@@ -17,7 +17,7 @@ public class FirstOutputStreamClass {
 	//providing input as string in file   \n  is used for every time we insert data it will be taken in new line
 	str = str+"\n";
 	
-	
+	//we are using constructors here
 FileOutputStream fos = new FileOutputStream("E:\\\\mkpits_workspace\\\\CoreJava_Harsh_Gupta\\\\src\\\\com\\\\mkpits\\\\filehandling\\\\inputstream.txt", true);
 //string data will be converted into byte array and written in file with write method
 byte b[]= str.getBytes();

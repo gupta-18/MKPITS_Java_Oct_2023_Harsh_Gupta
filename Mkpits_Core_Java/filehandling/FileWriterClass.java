@@ -13,7 +13,7 @@ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 System.out.println("Enter the data");
 String var = br.readLine();
 var= var+ "\n";
-
+//we are using constructors here
 FileWriter fw = new FileWriter("E:\\mkpits_workspace\\CoreJava_Harsh_Gupta\\src\\com\\mkpits\\filehandling\\logic.txt", true);
 fw.write(var);
 fw.close();
