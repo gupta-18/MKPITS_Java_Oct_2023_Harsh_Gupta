@@ -22,23 +22,30 @@ public class TwoListAddition {
 		
 		
 		
-//		sObj.addAll(s1Obj);
-//		for (String string : sObj) {
-//			System.out.println(string);
-//		}
+		sObj.addAll(s1Obj);
+		for (String string : sObj) {
+			System.out.println(string);
+		}
+		
+
+System.out.println("retain all");
+		
+		sObj.retainAll(s1Obj);
+		for (String string : sObj) {
+			System.out.println(string);
+		}
+		
 		System.out.println("\n\n hiii");
 
 		sObj.removeAll(s1Obj);
 		for (String string : sObj) {
 			System.out.println(string);
 		}
+		
 		System.out.println(sObj.size());
 		
 		
-		sObj.remove(0);
-		for (String string : sObj) {
-			System.out.println(string);
-		}
+		
 		
 		
 	}
