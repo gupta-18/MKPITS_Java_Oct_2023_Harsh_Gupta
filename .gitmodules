@@ -1,3 +1,6 @@
 [submodule "MKPITS_COREJAVA_HARSH_GUPTA"]
 	path = MKPITS_COREJAVA_HARSH_GUPTA
 	url = https://github.com/gupta-18/MKPITS_COREJAVA_HARSH_GUPTA.git
+[submodule "MKPITS_HTML_HARSHGUPTA"]
+	path = MKPITS_HTML_HARSHGUPTA
+	url = https://github.com/gupta-18/MKPITS_HTML_HARSHGUPTA.git
