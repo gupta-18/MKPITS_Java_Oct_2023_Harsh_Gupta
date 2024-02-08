@@ -4,3 +4,6 @@
 [submodule "MKPITS_HTML_HARSHGUPTA"]
 	path = MKPITS_HTML_HARSHGUPTA
 	url = https://github.com/gupta-18/MKPITS_HTML_HARSHGUPTA.git
+[submodule "MKPITS_CSS_HARSHGUPTA"]
+	path = MKPITS_CSS_HARSHGUPTA
+	url = https://github.com/gupta-18/MKPITS_CSS_HARSHGUPTA.git
