@@ -1,0 +1,19 @@
+body{
+    background-color: beige;
+    /* it is for bg color */
+    background-image: url(/images/image1.jpg);
+    /* it is for linking image */
+
+    
+     background-position: center;
+    
+     background-size: cover;
+
+
+     background-attachment: fixed;
+    
+}
+
+p{
+    font-weight: 600;
+}

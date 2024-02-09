@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(242, 161, 0);
+    /* it is for bg color */
+    background-image: url(/images/image2.jpg);
+    /* it is for linking image */
+    padding: 10px;
+    border: 10px solid rgb(74, 235, 15);
+    margin: 30px;
+    background-position:  top left;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+}
+
+p{
+    font-weight: 600;
+}
