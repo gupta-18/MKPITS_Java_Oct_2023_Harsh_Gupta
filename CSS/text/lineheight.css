@@ -1,0 +1,28 @@
+
+/* It specifies the distance between two lines. We can set this property to normal or specify it in the form of length, number or percentage.
+
+p{line-height: 60%;}
+h1{line-height: 150px;}
+ */
+
+p{
+    color: bisque;
+    text-align:start ;
+    text-decoration: underline;
+    direction: ltr;
+    letter-spacing: 5px;
+    line-height: 20px;
+
+}
+
+body{
+    background-color: rgb(00, 00, 00);
+}
+
+h1{
+    
+    color: aqua;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:  rgb(28, 149, 183);
+}

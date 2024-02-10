@@ -1,0 +1,28 @@
+/* text-transform is used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word. We can set this property to none, uppercase, lowercase or capitalize.
+
+h1{text-transform: uppercase};
+ */
+p{
+    color: bisque;
+    text-align:start ;
+    text-decoration: underline;
+    direction: ltr;
+    /* letter-spacing: 5px; */
+    /* line-height: 20px; */
+    text-indent: 100px;
+    text-transform: lowercase;
+
+}
+
+body{
+    background-color: rgb(00, 00, 00);
+}
+
+h1{
+    
+    color: aqua;
+    text-align: center;
+    /* text-decoration: underline; */
+    text-decoration-color:  rgb(28, 149, 183);
+    text-shadow: 3px 1px 2px #dc8410;
+}

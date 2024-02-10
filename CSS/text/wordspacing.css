@@ -1,0 +1,31 @@
+p{
+    color: bisque;
+    text-align:start ;
+    text-decoration: underline;
+    direction: ltr;
+    /* letter-spacing: 5px; */
+    /* line-height: 20px; */
+    text-indent: 100px;
+    text-transform: lowercase;
+    white-space: pre-line;
+    word-spacing: 20px;
+
+
+}
+
+body{
+    background-color: rgb(00, 00, 00);
+}
+
+h1{
+    
+    color: aqua;
+    text-align: center;
+    /* text-decoration: underline; */
+    text-decoration-color:  rgb(28, 149, 183);
+    text-shadow: 3px 1px 2px #dc8410;
+}
+
+span{
+    vertical-align: super;
+}

@@ -1,0 +1,28 @@
+
+/* It specifies the indention of the first line of text in a block. we can specify this property in the form of either length or percentage.
+Negative values are allowed. The first line will be indented to the left if the value is negative.
+
+p{text-indent: 30px;}
+ */
+p{
+    color: bisque;
+    text-align:start ;
+    text-decoration: underline;
+    direction: ltr;
+    /* letter-spacing: 5px; */
+    /* line-height: 20px; */
+    text-indent: 100px;
+
+}
+
+body{
+    background-color: rgb(00, 00, 00);
+}
+
+h1{
+    
+    color: aqua;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:  rgb(28, 149, 183);
+}
