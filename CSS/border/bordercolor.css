@@ -1,0 +1,18 @@
+p{
+    /* border-style: dashed; */
+/* border-style: dotted solid dashed; */
+border-style: dotted solid  double;
+/* border-style: dotted solid ; */
+
+
+/* border-width: thick; */
+/* border-width: thick medium 50px; */
+border-width: thick medium  thin 5px;
+
+
+/* border-color: chartreuse; */
+/* border-color: chartreuse yellow; */
+border-color: chartreuse yellow blue blueviolet;
+border-color: chartreuse yellow red;
+
+}

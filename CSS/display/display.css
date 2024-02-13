@@ -1,0 +1,38 @@
+#navb{
+    background-color: rgb(222, 199, 158) ;
+   text-align: end;
+   padding-top: 0px;
+   
+
+   
+}
+body{
+ background-color: rgb(244, 236, 222);   
+}
+nav{
+    padding-left: 20px;
+    display: inline-block;
+   padding-top: 7px;
+   padding-bottom:7px ;
+
+}
+
+nav:hover{
+    text-shadow: 0.8px 0.9px 0px rgb(159, 126, 98);
+    text-decoration: underline;
+}
+
+h1{
+    text-align: center;
+    color: rgb(159, 126, 98);
+    
+    
+}
+h1:hover{
+    text-shadow: 2px 1px 0px black;
+}
+
+#logo{
+   
+    display: flex;
+}
