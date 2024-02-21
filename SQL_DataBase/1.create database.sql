@@ -1,0 +1,2 @@
+create database MKPITS_DATABASE;
+USE MKPITS_DATABASE;

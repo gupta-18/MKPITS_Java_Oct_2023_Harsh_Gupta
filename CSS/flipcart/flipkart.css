@@ -1,0 +1,107 @@
+*{
+    /* background-color: rgb(206, 226, 226); */
+    margin-top: 0%;
+}
+#logo1{
+    height: 40px;
+    /* width: 160px */
+    padding-top: 4px;
+    padding-right: 5px;
+    
+    
+}
+.first{
+    border: solid 3px;
+    height: 60px;
+    padding-top: 5px;
+
+}
+
+#search{
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    border: none;
+    background-color: rgb(227, 227, 227);
+
+    
+}
+.container{
+    /* display: inline-block; */
+    display: flex;
+    
+}
+
+.second{
+    background-color: rgb(227, 227, 227);
+ display: inline-block;
+ /* float: left; */
+ border: none;
+ height: 40px;
+ padding-right: 5px;
+ padding-left: 5px;
+margin-top: 8px;
+border-radius: 7px;
+
+}
+input{
+    border: none;
+    background-color:  rgb(227, 227, 227) ;
+    padding-right: 100vh;
+    padding-left: 30px;
+}
+
+.photo{
+    background-color: rgb(227, 227, 227);
+padding-bottom: 3px;
+    height: 20px;
+    width: 20px;
+    padding: 4px 4px 0px;
+}
+
+.product{
+    height: 25px;
+    padding-left: 5px;
+    padding-top: 5px;
+    
+}
+
+#login{
+    margin-top: 13px;
+   margin-left: 10px; 
+}
+
+#cart{
+    margin-top: 16px;
+    margin-left: 23px;
+}
+#seller{
+    margin-top: 16px;
+    margin-left: 23px;
+}
+#menu{
+    margin-top: 16px;
+    margin-left: 23px;
+}
+#logintext{
+position:relative;
+bottom: 6px;
+left: 5px;
+
+}
+#carttext{
+position:relative;
+bottom: 6px;
+left: 5px;
+}
+#sellertext{
+position:relative;
+bottom: 6px;
+left: 5px;
+
+}
+
+#pic{
+    position: relative;
+    left: 30px;
+}
