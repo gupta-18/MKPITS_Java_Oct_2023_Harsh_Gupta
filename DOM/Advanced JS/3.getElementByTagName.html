@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="find">We are Learning JS</h1>
+    <h2 id="subscribe">Subscribe Technocrats Solutions</h2>
+    <p id="city">Hello Technocrats Solutions</p>
+    <p id="bye">Bye Technocrats Solutions</p>
+
+    <!-- <style></style>  . --- represents class and # --- represents id-->
+    <script>
+      // for whole document
+
+      let result = document.getElementsByTagName("*");
+      document.write(result);
+      console.log(result);
+
+      //element present only in body
+
+      let redult1 = document.body.getElementsByTagName(`*`);
+      document.write(redult1);
+      console.log(redult1);
+    </script>
+  </body>
+</html>
