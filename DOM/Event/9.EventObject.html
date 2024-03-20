@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technocrats Solutions</title>
+  </head>
+
+  <body>
+    <h1>Event Object</h1>
+    <p id="myp">Click Me</p>
+    <script>
+      document.getElementById(`myp`).addEventListener("click", (f) => {
+        console.log(f);
+        console.log(f.target);
+        console.log(e.currentTarget);
+      });
+    </script>
+  </body>
+</html>

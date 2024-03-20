@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technocrats Solutions</title>
+  </head>
+
+  <body>
+    <h1>Focus Event</h1>
+    Name: <input type="text" id="mytext" />
+
+    <script>
+      let txt = document.getElementById("mytext");
+    //   txt.addEventListener("focus", (e)=>{txt.style.backgroundColor = `red`});
+
+      function bg(e) {
+        txt.style.backgroundColor = "black";
+      }
+      txt.addEventListener("focus", bg);
+    </script>
+  </body>
+</html>

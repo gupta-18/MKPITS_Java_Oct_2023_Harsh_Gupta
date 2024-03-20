@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technocrats Solutions</title>
+  </head>
+
+  <body>
+    <h1>Text Event</h1>
+    Name: <input type="text" id="mytext" />
+
+    <script>
+      let txt = document.getElementById("mytext");
+      function show(e) {
+        console.log(e.type + " " + e.data);
+      }
+      txt.addEventListener("textInput", show, false);
+    </script>
+  </body>
+</html>
