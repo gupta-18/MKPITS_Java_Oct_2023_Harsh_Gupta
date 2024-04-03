@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Technocrats Solutions</title>
+  </head>
+  <body>
+    <script>
+      var course = {
+        courseName: "JavaScript",
+        duration: "SixMonths",
+        tutor: "Technocrats Solutions",
+      };
+      // Object Destructuring
+      var { courseName: cname, duration: time, tutor: teacher } = course;
+      console.log(cname);
+      console.log(time);
+      console.log(teacher);
+
+      let Mkpits = {
+        Master: "Sir",
+        S1: "Kunal",
+        S2: "Samiksha",
+      };
+
+      let { Master: Teacher, S1: friend, S2: Student } = Mkpits;
+      console.log(Teacher);
+      console.log(friend);
+      console.log(Student);
+    </script>
+  </body>
+</html>
