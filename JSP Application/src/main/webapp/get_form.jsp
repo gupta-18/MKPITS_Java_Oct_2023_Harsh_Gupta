@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student Confirm</title>
+<title>get form</title>
 </head>
 <body>
-The Student is Register : ${param.fName}  ${param.lName} 
+The student is : ${param.fname} ${param.lname }
+<br>
+Student country is : ${param.country }
+<br>
+Favourite language is : ${param.favlang}
 </body>
 </html>
