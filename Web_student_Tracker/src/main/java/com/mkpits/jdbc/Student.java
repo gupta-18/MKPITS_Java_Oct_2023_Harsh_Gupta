@@ -68,7 +68,7 @@ public void setEmail(String email) {
 
 @Override
 public String toString() {
-	return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	return "Student_Model [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 }
 
 
