@@ -49,50 +49,49 @@ public class StudentControllerServletNew extends HttpServlet {
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		   try {
-			   String theCommand = request.getParameter("command");	
-			   
-			   if (theCommand == null) {
+		try {
+			//read the "command" parameter
+			String theCommand = request.getParameter("command");
+			
+			//if the command is missing, then default to listing student
+			
+			if(theCommand == null) {
 				theCommand = "LIST";
 			}
-			   
-			   switch (theCommand) {
-			case "LIST":
-				   listStudents(request, response);
-
+			
+			//route to the appropriate method
+			switch (theCommand) {
+			case "LIST" : 
+				listStudents(request,response);
 				break;
-			case "ADD":
+			case "ADD" :
 				addStudent(request,response);
 				break;
-
 			default:
-				   listStudents(request, response);
-				   
-				
+				listStudents(request,response);
 			}
-		} catch (Exception e) {
+			
+		}catch(Exception e) {
 			throw new ServletException();
 		}
 		}
 		
-	private void addStudent(HttpServletRequest request, HttpServletResponse response) {
-
+private void addStudent(HttpServletRequest request, HttpServletResponse response)throws Exception {
 		//read student data from form
-		
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String email = request.getParameter("email");
 		
-		//create new student_model object
+		// create new Student_Model object
+		Student_Model theStudent = new Student_Model(firstName, lastName, email);
 		
-		Student_Model theStudent =new Student_Model(firstName, lastName, email);
-		
-		//add student to the database
+		////add student to the database
 		studentDbUtil.addStudent(theStudent);
 		
-		
-		
+		//send back to main page (the student list)
+		listStudents(request, response);	
 	}
+
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
      // get students from db util
 		List<Student_Model> students = studentDbUtil.getStudents();
@@ -101,7 +100,7 @@ public class StudentControllerServletNew extends HttpServlet {
 		request.setAttribute("STUDENT_LIST", students);
 		
 		//send to JSP page(view)
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-student-CSS.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-student-button.jsp");
 		dispatcher.forward(request, response);
 		
 	}

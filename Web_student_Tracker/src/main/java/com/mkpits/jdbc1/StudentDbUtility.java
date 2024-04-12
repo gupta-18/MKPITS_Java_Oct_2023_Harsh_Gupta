@@ -33,7 +33,7 @@ public class StudentDbUtility {
 		  myConn = dataSource.getConnection();
 		  
 		  //create a sql statement
-		  String sql = "Select * from student order by last_name";
+		  String sql = "Select * from student order by id";
 		  myStmt = myConn.createStatement();
 		  
 		  //execute sql query
@@ -85,30 +85,30 @@ private void close(Connection myConn, Statement myStmt, ResultSet myRs) {
 }
 
 public void addStudent(Student_Model theStudent) {
-
 	Connection myConn = null;
 	PreparedStatement myStmt = null;
-	//data dalne k liye preparedstatment nikalne k liye statement
 	
 	try {
+		//get db connection
 		myConn = dataSource.getConnection();
 		
-		String sql = "inser into student( first.name,email) values(?,?,?)";
-	    myStmt = myConn.prepareStatement(sql);
-	    
-	    //set the param values for the student
-	    myStmt.setString(1, theStudent.getFirstName());
-	    myStmt.setString(1, theStudent.getLastName());
-	    myStmt.setString(1, theStudent.getEmail());
-	    //execute query
-	    
-	    
-	    
-	} catch (Exception e) {
-         e.printStackTrace(); 
+		//create sql for insert
+		String sql = "insert into student(first_name,last_name,email) values(?,?,?)";
+		myStmt = myConn.prepareStatement(sql);
+		
+		//set the param values for the student
+		myStmt.setString(1, theStudent.getFirstName());
+		myStmt.setString(2, theStudent.getLastName());
+		myStmt.setString(3, theStudent.getEmail());
+		
+		//execute SQL insert
+		myStmt.execute();
+	}catch (Exception e) {
+		e.printStackTrace();
 	}
-	
-	
+	finally {
+		close(myConn, myStmt, null);
+	}
 	
 }
 
