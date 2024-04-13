@@ -37,6 +37,7 @@ List<Student_Model> theStudents = (List<Student_Model>) request.getAttribute("ST
                       <td>${tempStudent.firstName} </td>
                       <td>${tempStudent.lastName} </td>
                       <td>${tempStudent.email} </td>
+                      
            
                    
     </tr>
