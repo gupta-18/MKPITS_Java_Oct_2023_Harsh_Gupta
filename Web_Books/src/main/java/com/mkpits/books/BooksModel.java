@@ -7,19 +7,32 @@ public class BooksModel {
 	 private String author;
 	 private String date;
 	 private String genres;
-	public BooksModel(int id, String title, String author, String date, String genres) {
+	 private String characters;
+	 private String synopsis;
+	public BooksModel(int id, String title, String author, String date, String genres, String characters, String synopsis) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.date = date;
 		this.genres = genres;
+		this.characters =characters;
+		this.synopsis= synopsis;
 	}
 	public BooksModel() {
 		super();
 	}
 	public int getId() {
 		return id;
+	}
+	public BooksModel(String title, String author, String date, String genres, String characters, String synopsis) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.date = date;
+		this.genres = genres;
+		this.characters =characters;
+		this.synopsis= synopsis;
 	}
 	public void setId(int id) {
 		this.id = id;
@@ -48,11 +61,26 @@ public class BooksModel {
 	public void setGenres(String genres) {
 		this.genres = genres;
 	}
+	
+	
+	public String getCharacters() {
+		return characters;
+	}
+	public void setCharacters(String characters) {
+		this.characters = characters;
+	}
+	public String getSynopsis() {
+		return synopsis;
+	}
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
+	}
 	@Override
 	public String toString() {
 		return "BooksModel [id=" + id + ", title=" + title + ", author=" + author + ", date=" + date + ", genres="
-				+ genres + "]";
+				+ genres + ", characters=" + characters + ", synopsis=" + synopsis + "]";
 	}
+	
 	 
 	 
 	

@@ -14,10 +14,6 @@ import javax.sql.DataSource;
 
 
 
-
-
-
-
 /**
  * Servlet implementation class BooksControllerServlet
  */
@@ -55,13 +51,111 @@ public class BooksControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			listBooks(request, response);
-		} catch (Exception e) {
-			// TODO: handle exception
+			//read the "command" parameter
+			String theCommand = request.getParameter("command");
 			
-			throw new ServletException(e);
+			//if the command is missing, then default to listing student
+			
+			if(theCommand == null) {
+				theCommand = "LIST";
 			}
+			
+			//route to the appropriate method
+			switch (theCommand) {
+			case "LIST" : 
+				listBooks(request,response);
+				break;
+			case "ADD" :
+				addBook(request,response);
+				break;
+			case "LOAD" :
+				loadBook(request,response);
+				break;
+			case "UPDATE" :
+				updateBook(request,response);
+				break;
+			case "DELETE" :
+				deleteBook(request,response);
+				break;
+			default:
+				listBooks(request,response);
+			}
+			
+		}catch(Exception e) {
+			throw new ServletException();
 		}
+
+		}
+	private void deleteBook(HttpServletRequest request, HttpServletResponse response)throws Exception {
+
+		// read student id from form data
+		String bookId = request.getParameter("bookId");
+		
+		//delete student from database
+		booksDbUtil.deleteBook(bookId);
+		
+		//send back to again "list-student.jsp"
+		listBooks(request, response);
+	}
+	
+	private void updateBook(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// read student id from form data
+		String bookId = request.getParameter("bookId");
+		int id = Integer.parseInt(bookId);
+
+		// read student data from form
+		 String title = request.getParameter("title");
+		  String author = request.getParameter("author");
+		  String date = request.getParameter("date");
+		  String genres = request.getParameter("genres");
+		  String characters = request.getParameter("characters");
+		  String synopsis = request.getParameter("synopsis");
+
+		// create a new student object
+		BooksModel theBook = new BooksModel(id, title, author, date, genres, characters, synopsis);
+
+		// perform update on deatabase
+		booksDbUtil.updateBook(theBook);
+
+		// send them back to the list "list-students" page
+		listBooks(request, response);
+	}
+	private void loadBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		//read student id from form data
+		String theBookId = request.getParameter("bookId");
+		//get student from database (dbUtility)
+		BooksModel theBook = booksDbUtil.loadBooks(theBookId);
+		//place student in the request attribute
+		
+		request.setAttribute("THE_BOOK", theBook);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/updateListBook.jsp");
+		dispatcher.forward(request, response);
+		
+		
+		}
+	private void addBook(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		// read student data from form
+		String title = request.getParameter("title");
+		  String author = request.getParameter("author");
+		  String date = request.getParameter("date");
+		  String genres = request.getParameter("genres");
+		  String characters = request.getParameter("characters");
+		  String synopsis = request.getParameter("synopsis");
+
+
+		// create new Student_Model object
+		BooksModel theBook = new BooksModel(title, author, date, genres, characters, synopsis);
+
+		//// add student to the database
+		booksDbUtil.addBook(theBook);
+
+		// send back to main page (the student list)
+		listBooks(request, response);
+
+	}
 	
 	private void listBooks(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
@@ -69,7 +163,7 @@ public class BooksControllerServlet extends HttpServlet {
 		   
 		   request.setAttribute("BOOK_LIST", books);
 		   
-		   RequestDispatcher dispatcher = request.getRequestDispatcher("/listBook.jsp");
+		   RequestDispatcher dispatcher = request.getRequestDispatcher("/listBookButton.jsp");
 		   dispatcher.forward(request, response);
 			}
 
