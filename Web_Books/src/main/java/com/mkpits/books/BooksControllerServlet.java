@@ -65,6 +65,9 @@ public class BooksControllerServlet extends HttpServlet {
 			case "LIST" : 
 				listBooks(request,response);
 				break;
+			case "RECORDS" : 
+				listRecords(request,response);
+				break;
 			case "ADD" :
 				addBook(request,response);
 				break;
@@ -86,6 +89,27 @@ public class BooksControllerServlet extends HttpServlet {
 		}
 
 		}
+	private void listRecords(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
+		String spageid = request.getParameter("page");
+		int pageid = Integer.parseInt(spageid);
+		int total = 100;
+		if (pageid == 1) {
+		} else {
+			pageid = pageid - 1;
+			pageid = pageid * total + 1;
+		}
+		List<BooksModel> books = booksDbUtil.getBooks(pageid, total);
+		// add student to the request
+		request.setAttribute("BOOK_LIST", books);
+		// send to JSP page view
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/listBookButton.jsp");
+		dispatcher.forward(request, response);
+
+	}		
+	
+
+
+
 	private void deleteBook(HttpServletRequest request, HttpServletResponse response)throws Exception {
 
 		// read student id from form data

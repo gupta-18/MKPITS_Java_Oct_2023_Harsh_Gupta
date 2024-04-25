@@ -5,13 +5,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Book</title>
-<link type="text/css" rel="stylesheet" href="css/style.css">
-<link type="text/css" rel="stylesheet" href="css/add-student-style.css">
+<!-- <link type="text/css" rel="stylesheet" href="css/style.css">
+ -->
+ <link type="text/css" rel="stylesheet" href="css/add-book-style.css">
 </head>
 <body>
 	<div id="wrapper">
 		<div id="header">
-			  <h2 style="text-align: center;"> Book Storage</h2>
+			 
 		</div>
 	</div>
 	
@@ -54,16 +55,16 @@
 	</tr>
 	
 	<tr>
-	<td><input type="submit" value="ADD" class="save"></td>
+	<td class="btn"><input  type="submit" value="ADD" class="save"></td>
 	</tr>
 	</tbody>
 	
 	</table>
 	</form>
 	<div style="clear:both;"></div>
-	<p>
-	<a href="BooksControllerServlet">Back To List</a>
-	</p>
+	<span class="backlist">
+	<a id="backtolist" href="BooksControllerServlet">Back To List</a>
+	</span>
 	</div>
 </body>
 </html>

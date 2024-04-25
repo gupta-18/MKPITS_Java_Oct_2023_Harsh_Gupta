@@ -8,7 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>BookList</title>
-<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/styletemp.css">
 </head>
 <%List<BooksModel> theBooks = (List<BooksModel>)request.getAttribute("BOOK_LIST");
  %>

@@ -5,8 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Book</title>
-<link type="text/css" rel="stylesheet" href="css/style.css">
-<link type="text/css" rel="stylesheet" href="css/add-student-style.css">
+<!-- <link type="text/css" rel="stylesheet" href="css/styletemp.css"> -->
+<link type="text/css" rel="stylesheet" href="css/add-book-style.css">
 </head>
 <body>
 	<div id="wrapper">
@@ -64,6 +64,7 @@
 	</form>
 	<div style="clear:both;"></div>
 	<p>
+	
 	<a href="BooksControllerServlet">Back To List</a>
 	</p>
 	</div>

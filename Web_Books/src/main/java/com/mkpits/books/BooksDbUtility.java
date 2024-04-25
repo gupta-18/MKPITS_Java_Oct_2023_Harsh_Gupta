@@ -52,7 +52,7 @@ public class BooksDbUtility {
 				  String characters = myRs.getString("characters");
 				  String synopsis = myRs.getString("synopsis");
 				  
-				  System.out.println(id);
+				  
 
 				  
 				  //create new student object
@@ -227,5 +227,54 @@ public class BooksDbUtility {
 			}
 
 		}
+
+
+	public List<BooksModel> getBooks(int start, int total) {
+		 List<BooksModel> books = new ArrayList<>();
+		 
+		  Connection myConn = null;
+		  Statement myStmt = null;
+		  ResultSet myRs = null;
+		  try {
+			  
+			  myConn = dataSource.getConnection();
+			  
+			  //create a sql statement
+			  String sql = "Select * from books  limit "+(start-1)+","+total;
+			  myStmt = myConn.createStatement();
+			  
+			  //execute sql query
+			  myRs = myStmt.executeQuery(sql);
+			  
+			  //process the result set
+			  while(myRs.next()) {
+				  
+				  //retrieve data from result set
+				  int id = myRs.getInt("id");
+				  String title = myRs.getString("title");
+				  String author = myRs.getString("author");
+				  String date = myRs.getString("date");
+				  String genres = myRs.getString("genres");
+				  String characters = myRs.getString("characters");
+				  String synopsis = myRs.getString("synopsis");
+				  
+				 
+
+				  
+				  //create new student object
+				  BooksModel tempBooks = new BooksModel(id, title, author, date, genres, characters, synopsis);
+				  
+				  //add it to the list of the student
+				  books.add(tempBooks);
+			  }
+		  }
+		  catch(Exception e) {
+			  e.printStackTrace();
+		  } finally {
+			  close(myConn, myStmt, myRs);
+			  
+		  }
+		  return books;
+	}
 	  
 }

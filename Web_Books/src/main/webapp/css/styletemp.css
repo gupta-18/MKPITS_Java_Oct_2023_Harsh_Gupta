@@ -1,0 +1,130 @@
+@charset "ISO-8859-1";
+*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	
+}
+
+html, body{
+	padding:0px; 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width:100%;
+		overflow-x: hidden;
+	}
+
+table {   
+	border-collapse:collapse;
+	border-bottom:1px solid gray;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	width:100%;
+}
+ 
+th {
+	border-bottom:1px solid gray;
+	background:none repeat scroll 0 0 #000;
+	padding:10px;
+	color: #FFFFFF;
+}
+
+tr {
+	border-top:1px solid gray;
+	text-align:center;	
+}
+ 
+tr:nth-child(even) {background:#faf8d7}
+tr:nth-child(odd) {background:#acc6aa}	
+ 
+#wrapper {width: 100%; margin-top: 0px; }
+#header {width: 100%; background: black; margin-top: 0px; padding:15px 0px 15px 0px;}
+#header h2 {width: 100%; margin:auto; color: #FFFFFF;background:none; margin-left: 45%; }
+#container {width: 100%; margin:auto}
+#container h3 {color: #000;} 
+#container #content {margin-top: 0px;}
+
+.add-books-button {
+	border: 1px solid #666; 
+	border-radius: 5px; 
+	padding: 4px; 
+	font-size: 12px; color: #71a0a5; font-size: larger;
+	font-weight: bold;
+	width: 120px; 
+	padding: 5px 10px; float: right;
+	width: 125px;
+	margin-bottom: 15px;
+	background: #faf8d7;
+	box-shadow: 3px 3px 5px 3px gainsboro
+}
+p{
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	}
+.read{
+	border: none;
+	color:  rgb(89, 60, 61);
+	background:none;
+	text-decoration: underline;
+}
+
+.pagination-header{
+	width: 60%;
+	height: 40px;
+	
+	display: flex;
+	align-items: center;
+}
+.pagination-button{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	margin-left: -70px;
+}
+.pagination-button a{
+	height: 80%;
+	width: 75px;
+	margin-left: 30px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	background-color:lemonchiffon;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px 3px gainsboro;
+}
+.outer{
+	
+	display: flex;
+	height: 60px;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+ 
+ input{
+	 height: 30px;
+	 width: 300px;
+	 margin-left: 20px;
+ }
+ 
+ .updel{
+	 height: 50px;
+	 width: 70px;
+
+	 text-decoration: underline;
+	 color:  rgb(89, 60, 61);
+ }
+ 
+ #myInput{
+	 background-color:#faf8d7  ;
+	 color: rgb(65, 99, 103);
+	 border-radius: 5px;
+	 height: 35px;
+	 box-shadow: 3px 3px 5px 3px gainsboro
+ }
