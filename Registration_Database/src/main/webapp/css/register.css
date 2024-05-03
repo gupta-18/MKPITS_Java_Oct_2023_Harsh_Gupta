@@ -1,0 +1,67 @@
+@charset "ISO-8859-1";.container {
+    width: 75vh;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: transparent ;
+    backdrop-filter: blur(9px);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container label {
+    
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="text"],
+.container select,
+.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+/*    background-color: rgb(101, 182, 184);
+*/ background: transparent;  
+ color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    color: black;
+    text-decoration: underline;  
+    
+}
+
+.backpage{
+	display: flex;
+}
+
+.backpage a{
+	color: black;
+	text-decoration: none;
+}
+.backpage a:hover{
+	color: black;
+	text-decoration:underline;
+}
+::placeholder{
+	color: black;
+}
